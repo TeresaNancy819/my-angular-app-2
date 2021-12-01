@@ -1,0 +1,145 @@
+<div class="heading">
+<h3>welcome</h3>
+</div>
+
+<div class= "box">
+<app-sign-in></app-sign-in>
+<app-sign-in></app-sign-in>
+<app-sign-in></app-sign-in>
+</div>
+<h1>{{getName("teresa")}}</h1><br/>
+<p> click event </p>
+<button (click)="getN('nancy')">click me</button><br/>
+
+<!-- >>day 10 -->
+
+
+<button (click)="getN('welcome')">click</button><br/>
+<p>keyup Event</p>
+<input type="text" (keyup)="getKeyU()"><br/>
+<p>keydown event </p>
+<input type="text" (keydown)="getKeyD()"><br/>
+<p>mouse over event</p>
+<button (mouseover)="getKeyO()">mouse over</button> 
+
+<input type="text" value={{name}} disabled={{disabledBox}}>
+<input type="text" [value]="name" [disabled]= "disabledBox">   
+<button (click)="enableInput()">Enable me</button>
+
+<input type="text" value={{mailid}} placeholder={{emailPlaceholderText}}>
+<input type="text" [value]="mailid" [placeholder]="emailPlaceholderText">
+<button (click)="enableInputTwo()">Enable me</button>
+
+<h1 *ngIf="day else elseblock">angular</h1>
+<ng-template #elseblock> <h1>html</h1> </ng-template>
+
+
+<h1 *ngIf="festival=='christmas' else elseblock">celebrate</h1>
+<ng-template #elseblock> <h1>work</h1> </ng-template>
+
+<div class="container">
+    <p *ngIf="show else textbox "><button>Click Here</button></p>
+  </div>
+<ng-template #textbox>
+  This is a textbox <input type="text">
+</ng-template>
+
+ <app-users-list></app-users-list> -->
+ <h4 *ngFor="let name of employee">
+     {{name.fName}}
+     {{name.age}}
+     {{name.dept}}
+
+</h4>
+
+
+
+<div [ngSwitch]="color">
+<div *ngSwitchCase ="'red'">you have picked red color</div>
+<div *ngSwitchCase ="'purple'">you have picked purple color</div>
+<div *ngSwitchCase ="'blue'">you have picked blue color</div>
+<div *ngSwitchDefault>pick once again</div>
+</div> 
+
+
+
+<!-- day11 -->
+<!-- ngstyle  -->
+  <h1 style="color:red">Hello</h1>
+<h1 [ngStyle]="{'color':'tomato'}">hii</h1>
+<h1 [ngStyle]="{'color':textcolor}">welcome</h1>
+<h1 [ngStyle]="{'background-color':bgcolor==='black'? 'black':'grey'}">Teresa Nancy</h1>
+
+<!--- ngClass -->
+ <h1 [ngClass]="'changeColor'">Hello</h1>
+<h1 [ngClass]="'changeColor bgcolor'">rupesh</h1>
+<h1 [ngClass]="styleColor">paswan</h1>
+<h1 [ngClass]="styleColor==='font'? 'bgColor' :'changeColor'">babymoses</h1>
+<h1 [ngClass]="styleSize==='changeSize'? 'changeStyle':'changeColor'">christmas</h1> 
+
+<h1 appHighlight>hello</h1>
+
+ <h1 appHighlight >{{'UPPER' | lowercase}}</h1>
+<h1>{{'lower'| uppercase}}</h1>
+<h1>{{'123' |currency}}</h1>
+<h1>{{dateExample | date}}</h1>
+<h1> {{'0.50'  |  percent}}</h1>
+<!-- parameterized -->
+ <h1>{{'123' |currency:'GBP'}}</h1>
+<h1>{{dateExample |date:'long'}}</h1>
+<h1>{{dateExample |date:'short'}}</h1>
+<h1>{{dateExample |date:'dd/MM/yy'}}</h1>
+<h1> {{ '0.512'| percent:'3.2-3'}}</h1>  
+ <app-login></app-login>
+<h1 appDemo>hello</h1>  
+
+
+<!-- DAY 12 -->
+<!-- forms -->
+
+<div class = "conatinerOne"> 
+  <form action="">
+       <h2>Employee Interests Survey form</h2>
+           <br>
+          <label for="fname">enter your First name:</label>
+          <input type="text" id="fname" name="fname" placeholder="first name"><br>
+          <label for="lname">enter your department name</label>
+          <input type="text" id="dept" name="dept" placeholder="department name">
+          
+           <p>Tell Us Little About Yourself</p>
+              <textarea id="review" name="review" rows="4" cols="50"></textarea>       
+               <p>Do You Exercise at Home</p>
+               <input type="radio" name="yes" value="YES"> 
+              <label for="yes">Yes</label>
+             <input type="radio" name="no" value="NO">
+            <label for="no">NO</label><br>
+     
+             <p>How Do You Like To Read About Your Favorite Topic?</p>
+            <input type="checkbox" id="fav" name="type1" value="books">
+             <label for="type1"> Books</label>
+             <input type="checkbox" id="fav" name="type2" value="online">
+             <label for="type2">Onile Resourses</label>
+             <input type="checkbox" id="fav" name="type3" value="phone">
+             <label for="type3"> Phone Apps</label>
+             <input type="checkbox" id="fav" name="type4" value="magzines">
+             <label for="type4"> Magzines</label><br>
+   
+          <label for="movie">what genere of movie do u like?</label>
+            <select name="movies" id="movies">
+               <option value="comedy">Comedy</option>
+                <option value="romantic">romantic</option>
+                 <option value="thriller">Thriller</option>
+                <option value="horror">Horror</option>
+          </select>
+           <br>
+           <input type="submit" value="Submit"> 
+  </form> 
+  
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <app-nav-bar> </app-nav-bar> 
+ 
+  

@@ -1,0 +1,13 @@
+.conatiner{
+    border: 2px solid rgb(233, 70, 52);
+    border-radius: 5px;
+    width:200px;
+    height:300px;
+    padding:20px;
+    background-color: rgb(236, 65, 65);
+    
+}
+button{
+    background-color: rgb(35, 216, 35);
+    width:170px;
+}

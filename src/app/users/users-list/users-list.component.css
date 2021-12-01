@@ -1,0 +1,17 @@
+h1{
+    border: 1px solid rgb(105, 6, 23);
+    width:auto;
+    height:auto;
+    background-color: salmon;
+    
+}
+*{
+    box-sizing: border-box;
+}
+.conatiner{
+    border: 1px solid black;
+    width : 700px;
+    height:800px;
+    font-weight: bold;
+    padding:50px;
+}

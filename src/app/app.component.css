@@ -1,0 +1,45 @@
+.box{
+display: flex;
+width:1000px;
+justify-content: space-around;
+
+margin-left: 100px;
+}
+.heading{
+    border:2px solid rgb(134, 21, 8);
+    width: auto;
+    height:auto;
+    background-color: salmon;
+} */
+
+/* 
+Day 11 */
+
+.changeColor{
+    color:hotpink;
+
+}
+.newFont{
+    color:indianred;
+}
+.ChangeSize{
+    font-style: italic;
+} 
+
+
+
+/* forms */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-style: italic;
+}
+.conatinerOne{
+    border: 1px solid black;
+    width : 500px;
+    height:400px;
+    padding:50px;
+    margin-left:70px;
+    background-color: rgb(245, 111, 138);
+}
